@@ -1,8 +1,5 @@
 class Letter
 
-  WORDS = %w(this is one sentence made out of lionoil with only one palindrome in it and
-   that palindrome is actually two words smushed into one.)
-
   def self.palindrome_solver(words)
     solutions = []
     words.each do |word|
@@ -19,6 +16,8 @@ class Letter
     puts solutions.each { |soln| soln + ' ' }
   end
 
-  palindrome_solver(WORDS)
+  def random_letter(letters)
+    letters[rand(letters.size) + 1]
+  end
 
 end
